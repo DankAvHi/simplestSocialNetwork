@@ -1,9 +1,0 @@
-[submodule "server"]
-	path = simplest-social-network-server
-	url = https://github.com/DankAvHi/simplest-social-network-server.git
-[submodule "client-web"]
-	path = client/simplest-social-network-client-web
-	url = https://github.com/DankAvHi/simplest-social-network-server.git
-[submodule "client-mobile"]
-	path = client/simplestSocialNetworkClientMobile
-	url = https://github.com/DankAvHi/simplestSocialNetworkClientMobile.git

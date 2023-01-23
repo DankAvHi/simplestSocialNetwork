@@ -1,1 +1,0 @@
-# Simplest Social Network Project
