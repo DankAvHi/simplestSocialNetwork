@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug server",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "start:debug", "--", "--inspect-brk"],
+      "console": "integratedTerminal",
+      "restart": true,
+      "autoAttachChildProcesses": true,
+      "cwd": "${workspaceFolder}/simplest-social-network-server"
+    },
+    {
+      "name": "Debug client web",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      },
+      "cwd": "${workspaceFolder}/client/simplest-social-network-client-web"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Client web + Server",
+      "configurations": ["Debug client web", "Debug server"]
+    }
+  ]
+}
